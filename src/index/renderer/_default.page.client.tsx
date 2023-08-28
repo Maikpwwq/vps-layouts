@@ -10,7 +10,9 @@ import { hydrateRoot, createRoot, Root } from 'react-dom/client'
 import { PageShell } from './PageShell'
 import type { PageContextClient } from './types'
 
+export { root }
 let root: Root
+
 // This render() hook only supports SSR, see https://vite-plugin-ssr.com/render-modes for how to modify render() to support SPA
 async function render(pageContext: PageContextClient) {
     const { Page, pageProps } = pageContext
@@ -29,6 +31,7 @@ async function render(pageContext: PageContextClient) {
             root = createRoot(container)
         }
         root.render(page)
+  
         // SSR
     } else {
         root = hydrateRoot(container, page)

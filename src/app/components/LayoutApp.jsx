@@ -2,7 +2,7 @@ import * as React from 'react'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import Box from '@mui/material/Box'
-import { theme } from '#@/pages/app/components/theme.tsx'
+import { theme } from '#@/app/components/theme.tsx'
 
 export { LayoutApp }
 

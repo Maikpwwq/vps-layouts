@@ -1,6 +1,6 @@
-import { Counter } from "./Counter";
+import { Counter } from "#@/index/components/Counter";
 import Button from "@mui/material/Button";
-import { Link } from '#@/pages/index/renderer/Link';
+import { Link } from '#@/index/renderer/Link';
 
 export { Page };
 

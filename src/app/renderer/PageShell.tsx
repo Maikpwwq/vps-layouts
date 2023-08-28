@@ -1,14 +1,15 @@
-import React from 'react'
-import type { PageContext } from './types'
-// import './PageShell.css'
-import { PageContextProvider } from './usePageContext'
-// import { Link } from './Link'
-import { Layout } from '#@/pages/index/components/Layout'
-
-import './App.scss'
-import './index.scss'
-
 export { PageShell }
+
+import React from 'react'
+
+import type { PageContext } from './types'
+import { LayoutApp } from '#@/app/components/LayoutApp'
+import { PageContextProvider } from './usePageContext'
+
+import { Providers } from './Providers'
+
+import '#@/app/renderer/Private-App.scss'
+import '#@/index/renderer/index.scss'
 
 
 function PageShell({
@@ -18,12 +19,14 @@ function PageShell({
     children: React.ReactNode
     pageContext: PageContext
 }) {
-
+    // const Layout = LayoutPaperbase || pageContext.exports.Layout
 
     return (
         <React.StrictMode>
             <PageContextProvider pageContext={pageContext}>
-                <Layout>{children}</Layout>
+                <Providers>
+                    <LayoutApp>{children}</LayoutApp>
+                </Providers>
             </PageContextProvider>
         </React.StrictMode>
     )

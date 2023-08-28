@@ -2,13 +2,13 @@ export { Page }
 
 // Pagina de Usuario - Perfil
 import React from 'react'
-import { usePageContext } from '#@/pages/app/renderer/usePageContext';
+import { usePageContext } from '#@/app/renderer/usePageContext';
 // react-bootrstrap
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
-import { Link } from '#@/pages/app/renderer/Link';
+import { Link } from '#@/app/renderer/Link';
 
 const Page = () => {
     const pageContext = usePageContext();
