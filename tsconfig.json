@@ -3,24 +3,26 @@
   // "extends": "ts-node/node16/tsconfig.json",
   "compilerOptions": {
     "strict": true,
-    "module": "ES2020",
+    "module": "ESNext", // ES2020
     "target": "ES2020",
     "moduleResolution": "Node",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["node_modules/@sendbird/uikit-react/index.d.ts"],
   // "include": ["/**/*.ts", "/**/*.tsx"],
   // "exclude": ["node_modules"],
   "ts-node": {
-    // "experimentalSpecifierResolution": "node",
+    // "files": true,
+    "experimentalSpecifierResolution": "node",
     "transpileOnly": true,
     "esm": true,
-    "compilerOptions": {
-      "moduleResolution": "Node16"
-    }
+    // This throws me error
+    // "compilerOptions": {
+    //   "moduleResolution": "Node16"
+    // }
   }
 }

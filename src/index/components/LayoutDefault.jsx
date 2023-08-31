@@ -4,9 +4,9 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Box from '@mui/material/Box'
 import { theme } from '#@/app/components/theme.tsx'
 
-export { Layout }
+export { LayoutDefault }
 
-function Layout({ children }) {
+function LayoutDefault({ children }) {
 
     return (
         <ThemeProvider theme={theme}>

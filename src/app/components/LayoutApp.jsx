@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
+import './Private-App.scss'
+
 import Box from '@mui/material/Box'
 import { theme } from '#@/app/components/theme.tsx'
 

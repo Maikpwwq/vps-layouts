@@ -3,7 +3,7 @@ import type { PageContext } from './types'
 // import './PageShell.css'
 import { PageContextProvider } from './usePageContext'
 // import { Link } from './Link'
-import { Layout } from '#@/index/components/Layout'
+import { LayoutDefault } from '#@/index/components/LayoutDefault'
 
 import './App.scss'
 import './index.scss'
@@ -19,6 +19,8 @@ function PageShell({
     pageContext: PageContext
 }) {
 
+
+    const Layout = pageContext.exports.Layout || LayoutDefault
 
     return (
         <React.StrictMode>

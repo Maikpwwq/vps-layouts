@@ -19,7 +19,6 @@ if (isProd) {
             '@mui/material',
             '@mui/utils',
             'react-bootstrap',
-            '@sendbird/uikit-react',
         ]
     )
 }
